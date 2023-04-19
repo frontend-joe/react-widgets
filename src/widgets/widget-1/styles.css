@@ -1,0 +1,103 @@
+:root {
+  --color-primary: #5644fd;
+  --tab-width: 300px;
+  --button-width: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: "Euclid Circular A", "Poppins";
+  line-height: 1.5;
+  background: #f1f0ff;
+  color: #58547b;
+}
+
+.widget {
+  background: #ffffff;
+  width: var(--tab-width);
+  border-radius: 8px;
+}
+
+.widget > header {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #e2e1ef;
+}
+
+.widget > header > button {
+  padding: 20px;
+  font-size: 15px;
+  width: var(--button-width);
+  cursor: pointer;
+  background: transparent;
+  color: #918db7;
+  border: 0;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.widget > header > button:not(.active) {
+  opacity: 0.7;
+}
+
+.widget > header > button:hover:not(.active) {
+  opacity: 1;
+}
+
+.widget > header > button.active {
+  color: var(--color-primary);
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+}
+
+.content-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: calc(var(--tab-width) * 3);
+  transition: 0.3s;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  background: var(--color-primary);
+  transition: 0.2s;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.content-inner > div {
+  width: inherit;
+  padding: 20px;
+}
