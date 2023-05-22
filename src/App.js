@@ -1,4 +1,4 @@
-import { Widget } from "./widgets/widget-1/Widget";
+import { Widget } from "./widgets/widget-2/Widget";
 
 function App() {
   return <Widget />;
