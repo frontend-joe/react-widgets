@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 const menuHeight = getComputedStyle(document.documentElement).getPropertyValue(
@@ -15,7 +15,7 @@ export const Widget = () => {
   };
 
   return (
-    <article className={`card ${isOpen ? "open" : ""}`}>
+    <article className="card">
       <div className="buttons">
         {buttons.map((button, index) => (
           <button
