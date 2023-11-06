@@ -1,4 +1,4 @@
-import { Widget } from "./widgets/widget-2/Widget";
+import { Widget } from "./widgets/pagination/Pagination";
 
 function App() {
   return <Widget />;
